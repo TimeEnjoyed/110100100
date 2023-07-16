@@ -11,22 +11,27 @@ import { getStreams } from "../utils/api";
 
 import "animate.css";
 
+// This function returns an array of stream data from the API.
 export function loader() {
     return getStreams();
 }
 
-const Creators = () => {
+const TwitchStreams = () => {
+    // Stream data array
     const streamData = useLoaderData();
 
+    // This function formats the date string into a human-readable format.
     const formatDate = (time) => {
         const options = { year: "numeric", month: "long", day: "numeric" };
         return new Date(time).toLocaleDateString("en-US", options);
     };
 
+    // This function formats the time string into a human-readable format.
     const formatTime = (time) => {
         return time.split("T")[1].replace("Z", "");
     };
 
+    // Creates a stream data element from the stream data array.
     const streamDataElement = streamData.map((data, index) => {
         const thumbnailUrl = data.thumbnail_url;
         const imageSize = "640x360";
@@ -97,4 +102,4 @@ const Creators = () => {
     );
 };
 
-export default Creators;
+export default TwitchStreams;

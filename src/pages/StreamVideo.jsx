@@ -4,6 +4,7 @@ import Button from "@mui/material/Button";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ReactPlayer from "react-player";
 
+// This function returns an array of stream data from the API.
 export function loader({ params }) {
     return getVideos(params.id);
 }
@@ -27,7 +28,7 @@ const StreamVideo = () => {
                 </Link>
             </Button>
             <section className="stream-video-details">
-				<div>{}</div>
+                <div>{}</div>
                 <div className="title">{data.title}</div>
                 <div className="video">
                     <ReactPlayer
@@ -38,7 +39,6 @@ const StreamVideo = () => {
                         height="100%"
                     />
                 </div>
-
                 <div className="description">{data.description}</div>
             </section>
         </div>

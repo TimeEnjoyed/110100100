@@ -13,12 +13,15 @@ import NotFound from "./pages/Notfound";
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route element={<Layout />}>
+            {/* This route loads the TwitchStreams component. */}
             <Route path="/" element={<TwitchStreams />} loader={streamLoader} />
+            {/* This route loads the StreamVideo component. */}
             <Route
                 path="stream/:id"
                 loader={StreamVideoLoader}
                 element={<StreamVideo />}
             />
+            {/* This route is a catch-all route that loads the NotFound component. */}
             <Route path="*" element={<NotFound />} />
         </Route>
     )

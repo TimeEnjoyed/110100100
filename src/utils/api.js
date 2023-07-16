@@ -23,13 +23,13 @@ export async function getStreams() {
 
 export async function getVideos(id) {
     const clientId = import.meta.env.VITE_CLIENT_ID;
-    const oauth_token = import.meta.env.VITE_OAUTH_TOKEN;
+    const oauthToken = import.meta.env.VITE_OAUTH_TOKEN;
     const apiUrl = `https://api.twitch.tv/helix/videos?user_id=${id}`;
 
     const response = await fetch(apiUrl, {
         headers: {
             "Client-ID": clientId,
-            Authorization: `Bearer ${oauth_token}`,
+            Authorization: `Bearer ${oauthToken}`,
         },
     });
 
@@ -40,5 +40,6 @@ export async function getVideos(id) {
     }
 
     const data = await response.json();
+    // Return the first video.
     return data.data[0];
 }
