@@ -1,17 +1,23 @@
-export async function getNews(id) {
-    // const apiKey = import.meta.env.VITE_API_KEY;
-    // I will change the apiKey soon.
-    const apiKey = "cbcda5c90da24fa09c59e11cec3010a2";
-    const apiUrl = `https://newsapi.org/v2/top-headlines?country=us&category=technology&max=10&apiKey=${apiKey}`;
+export async function getStreams() {
+    const clientId = "kyr08hdj7h81pioe0yb8yj44lb5pdz";
+    const oauth_token = "2mcv6m82mc3biv287x62hf6993u5jy";
+    const apiUrl = `https://api.twitch.tv/helix/streams?first=100`;
 
-    const res = await fetch(apiUrl);
-    if (!res.ok) {
-        throw {
-            message: "Failed to fetch News",
-            statusText: res.statusText,
-            status: res.status,
-        };
+    const response = await fetch(apiUrl, {
+        headers: {
+            "Client-ID": clientId,
+            Authorization: `Bearer ${oauth_token}`,
+        },
+    });
+
+    if (!response.ok) {
+        throw new Error(
+            `Failed to fetch streams: ${response.status} ${response.statusText}`
+        );
     }
-    const data = await res.json();
-    return id ? data.articles[id] : data.articles;
+
+    const data = await response.json();
+    return data.data;
 }
+
+

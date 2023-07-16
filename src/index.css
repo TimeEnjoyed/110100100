@@ -8,8 +8,8 @@
     /* letter-spacing: 3px; */
     font-family: "Work Sans", sans-serif;
 
-    color-scheme: light dark;
-    background: var(--background, #2B2B2B);
+    /* color-scheme: light dark; */
+    background: var(--background, #2b2b2b);
 
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
