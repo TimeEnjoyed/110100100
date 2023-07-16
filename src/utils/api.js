@@ -1,9 +1,8 @@
 export async function getStreams() {
-    const clientId = "kyr08hdj7h81pioe0yb8yj44lb5pdz";
-    const oauthToken = "2mcv6m82mc3biv287x62hf6993u5jy";
-    const categoryId = "509670"; // Category ID for "Programming" on Twitch
+    const clientId = import.meta.env.VITE_CLIENT_ID;
+    const oauthToken = import.meta.env.VITE_OAUTH_TOKEN;
 
-    const apiUrl = `https://api.twitch.tv/helix/streams?first=10&game_id=${categoryId}`;
+    const apiUrl = `https://api.twitch.tv/helix/streams?first=20`;
 
     const response = await fetch(apiUrl, {
         headers: {
@@ -23,8 +22,8 @@ export async function getStreams() {
 }
 
 export async function getVideos(id) {
-    const clientId = "kyr08hdj7h81pioe0yb8yj44lb5pdz";
-    const oauth_token = "2mcv6m82mc3biv287x62hf6993u5jy";
+    const clientId = import.meta.env.VITE_CLIENT_ID;
+    const oauth_token = import.meta.env.VITE_OAUTH_TOKEN;
     const apiUrl = `https://api.twitch.tv/helix/videos?user_id=${id}`;
 
     const response = await fetch(apiUrl, {
