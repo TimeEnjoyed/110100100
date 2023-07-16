@@ -35,7 +35,8 @@ const StreamVideo = () => {
                     <span>Back to all Streams</span>
                 </Link>
             </Button>
-            <div className="stream-video-details">
+            <section className="stream-video-details">
+				<div>{}</div>
                 <div className="title">{data.title}</div>
                 <div className="video">
                     <ReactPlayer
@@ -48,7 +49,7 @@ const StreamVideo = () => {
                 </div>
 
                 <div className="description">{data.description}</div>
-            </div>
+            </section>
         </div>
     );
 };

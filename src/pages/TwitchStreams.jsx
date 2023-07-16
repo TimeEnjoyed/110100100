@@ -17,7 +17,6 @@ export function loader() {
 
 const Creators = () => {
     const streamData = useLoaderData();
-    // console.log(streamData);
 
     const formatDate = (time) => {
         const options = { year: "numeric", month: "long", day: "numeric" };
