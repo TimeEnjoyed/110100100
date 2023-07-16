@@ -2,7 +2,6 @@ import { getVideos } from "../utils/api";
 import { useLoaderData, Link } from "react-router-dom";
 import Button from "@mui/material/Button";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-// import fallBackImage from "../assets/image-placeholder.png";
 import ReactPlayer from "react-player";
 
 export function loader({ params }) {
@@ -13,14 +12,6 @@ const StreamVideo = () => {
     const data = useLoaderData();
     console.log(data);
 
-    const formatDate = (time) => {
-        const options = { year: "numeric", month: "long", day: "numeric" };
-        return new Date(time).toLocaleDateString("en-US", options);
-    };
-
-    const formatTime = (time) => {
-        return time.split("T")[1].replace("Z", "");
-    };
     return (
         <div className="stream-video-container">
             <Button

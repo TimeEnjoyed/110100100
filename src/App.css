@@ -183,10 +183,6 @@ header a {
     gap: 10px;
     margin-top: 2rem;
     padding: 1px 0;
-    flex-grow: 1;
-
-    border-radius: 20px;
-    background: var(--background-secondary, #3b3b3b);
 }
 
 .stream-details > .user {
