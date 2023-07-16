@@ -37,7 +37,14 @@ To run TwitchTube locally on your machine, follow these steps:
    npm install
    ```
 
-4. Rename the .env.example file to .env and update the environment variables with your Twitch API credentials:
+4. Obtain Twitch API Credentials:
+
+- Visit the [Twitch Developer Dashboard](https://dev.twitch.tv/console) and sign in with your Twitch account.
+- Create a new application to obtain your Twitch API client ID and OAuth token. Provide a name for your application and set the appropriate OAuth redirect URLs.
+- Once your application is created, you can find your Twitch API client ID on the application's details page.
+- To obtain the OAuth token, navigate to the "Applications" section in the Twitch Developer Dashboard and click on your application. Then, go to the "Manage" tab and click "New Secret" to generate a new token.
+
+5. Rename the .env.example file to .env and update the environment variables with your Twitch API credentials:
 
    ```shell
    cp .env.example .env
@@ -45,7 +52,7 @@ To run TwitchTube locally on your machine, follow these steps:
 
 Open the .env file and replace the placeholders with your actual Twitch API client ID and OAuth token.
 
-5. Start the development server:
+6. Start the development server:
 
    ```shell
    npm start
