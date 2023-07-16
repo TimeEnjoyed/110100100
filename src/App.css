@@ -1,8 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
 .app-container > main {
     display: flex;
     padding-inline: 3rem;
-    background-color: aqua;
+    margin-block-start: 3rem;
+    /* margin-inline: 1rem; */
 }
+
+/* .container-text {
+    display: flex;
+    padding-inline: 3rem;
+}
+
+.container-text > div {
+    color: var(--white, #fff);
+
+    font-family: Work Sans;
+    font-size: 67px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%;
+    text-transform: capitalize;
+}
+
+.container-text > img {
+    height: 510px;
+    align-items: center;
+    flex: 1 0 0;
+} */
 
 header {
     display: flex;
@@ -15,16 +40,22 @@ header {
 
 header a {
     text-decoration: none;
-    /* font-size: 2rem; */
-    color: white;
-    /* font-weight: bolder; */
+    color: var(--white, #fff);
+
+    /* H3 - Work Sans */
+    font-family: Work Sans;
+    font-size: 20 px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 45.6px */
+    text-transform: capitalize;
 }
 
 .card-containter {
-    background-color: chartreuse;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 30px;
+    margin-block: 2rem;
     width: 100%;
 }
 
@@ -61,7 +92,7 @@ header a {
     color: var(--caption-label-text, #858584);
 
     /* Base (Body) - Space Mono */
-    font-family: Space Mono;
+    font-family: "Space Mono", monospace;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -72,4 +103,33 @@ header a {
     width: 110px;
     align-items: flex-start;
     gap: 10px;
+}
+
+.card > h5 {
+    align-self: stretch;
+
+    color: #fff;
+    text-align: center;
+
+    /* H5 - Work Sans */
+    font-family: Work Sans;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%; /* 30.8px */
+    text-transform: capitalize;
+}
+
+.card > h6 {
+    flex: 1 0 0;
+
+    color: var(--caption-label-text, #858584);
+    text-align: right;
+
+    /* Base(Body) - Work Sans */
+    font-family: Work Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 22.4px */
 }
