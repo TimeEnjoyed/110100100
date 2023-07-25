@@ -8,7 +8,7 @@ import {
 import Layout from "./components/Layout";
 import TwitchStreams, { loader as streamLoader } from "./pages/TwitchStreams";
 import StreamVideo, { loader as StreamVideoLoader } from "./pages/StreamVideo";
-import NotFound from "./pages/Notfound";
+import NotFound from "./pages/NotFound";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
