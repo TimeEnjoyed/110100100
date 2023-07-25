@@ -1,0 +1,16 @@
+FROM node:latest
+
+WORKDIR /app
+
+RUN git clone https://github.com/TimeEnjoyed/110100100.git /app
+
+COPY project.env .
+COPY launch_project.sh .
+
+RUN mv project.env ./.env
+RUN npm install
+RUN chmod +x /app/launch_project.sh
+
+EXPOSE 5173
+
+CMD ["/bin/bash", "-c", "/app/launch_project.sh"]
